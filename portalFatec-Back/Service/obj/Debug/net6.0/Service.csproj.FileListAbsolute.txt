@@ -1,0 +1,17 @@
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Service.deps.json
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Service.dll
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Service.pdb
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Domain.dll
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Infra.Data.dll
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Domain.pdb
+D:\ProjetoTCC-BackEnd\Service\bin\Debug\net6.0\Infra.Data.pdb
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.csproj.AssemblyReference.cache
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.AssemblyInfoInputs.cache
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.AssemblyInfo.cs
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.csproj.CoreCompileInputs.cache
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.csproj.CopyComplete
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.dll
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\refint\Service.dll
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\Service.pdb
+D:\ProjetoTCC-BackEnd\Service\obj\Debug\net6.0\ref\Service.dll

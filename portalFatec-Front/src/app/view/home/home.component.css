@@ -1,0 +1,40 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+.portal{
+    font-family: 'Kanit', sans-serif;
+    font-size: 46px;
+    text-align: center;
+    margin-top: 0%;
+    margin-left: 380px;
+}
+
+.h1 {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.login{
+  margin-left: 450px;
+}
+
+.cabecalho{
+  display:flex;
+  justify-content: space-between;
+}
+
+body {
+  background: #f2f2f2;
+}
