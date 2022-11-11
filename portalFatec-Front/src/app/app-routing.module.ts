@@ -5,8 +5,8 @@ import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
 import { UpNoticiasComponent } from './view/up-noticias/up-noticias.component';
 
-const routes: Routes = [{path: 'home',component:HomeComponent}, 
-{path: 'login',component:LoginComponent}, {path: 'cadastro',component:CadastroComponent},];
+const routes: Routes = [{path: 'home',component:HomeComponent},
+{path: 'login',component:LoginComponent}, {path: 'cadastro',component:CadastroComponent}, {path: 'up-noticias',component:UpNoticiasComponent},];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
