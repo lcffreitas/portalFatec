@@ -1,113 +1,124 @@
-using Microsoft.AspNetCore.Hasting;
-using Microsoft.AspNetCore.Http;
+using AutoMapper;
+using Domain.Entity;
+using Domain.Interfaces;
+using Domain.Model;
 using Microsoft.AspNetCore.Mvc;
-using QuickBuy.Dominio.Contrtos;
-using QuickBuy.Dominio.Entidades;
-using System;
-using System.IO;
-using System.Linq;
 
-namespace QuickBuy.Web.Controllers
+namespace Application.Controllers
 {
     [Route("api/[Controller]")]
+    [ApiController]
     public class NoticiaController : Controller
     {
+        public IBaseService<Noticia> _service { get; }
+        public IMapper _mapper { get; }
 
-        private readonly INoticiaRepositori _noticiaRepositorio;
-        private IHttpContexteAccerssor _httpContextAccessor;
-        private IwebHostEnvironment _hostingEnvioronment;
-        public NoticiaController(INoticiaRepositori noticiaRepositori,
-                                 IHttppContextAccessor httppContextAccessor, IWebHostEnvironmet hostEnvironmet)
+        public NoticiaController(IBaseService<Noticia> service, IMapper mapper)
         {
-            _noticiaRepositorio = _noticiaRepositorio;
-            _httpContextAccessor = _httpContextAccessor;
-            _hostingEnvioronment = _hostingEnvioronment;
+            _service = service;
+            _mapper = mapper;
+        }
+
+        [HttpGet("{id}", Name = "GetById")]
+        public IActionResult GetById(string id)
+        {
+            try
+            {
+                var noticia = _service.GetById(id);
+                if (noticia!=null)                
+                    return Ok(noticia);
+                return NotFound();                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpGet]
-        public IActionResult get()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                 return Json(_noticiaRepositorio.ObterTodos());
-            }catch(Exception ex)
+                var noticias = await _service.GetAll();
+                var noticiasModel = _mapper.Map<IEnumerable<NoticiaModel>>(noticias);
+                return Ok(noticiasModel);
+            }
+            catch (Exception ex)
             {
-                return BadRequest(ex.ToString());
+                throw new Exception(ex.Message);
             }
         }
+
+        //recuperar as ultimas 3 noticias cadastradas
+        [HttpGet]
+        [Route("GetLatestNew")]
+        public async Task<IActionResult> GetLatestNew()
+        {
+            try
+            {
+                var noticias = await _service.GetAll();
+                noticias = noticias.OrderByDescending(n => n.Data).Take(3);
+                var noticiasModel = _mapper.Map<IEnumerable<NoticiaModel>>(noticias);
+                return Ok(noticiasModel);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         [HttpPost]
-        public IActionResult Post([FromBody]Noticia noticia)
-        {
-
-            try{
-                 noticia.Validade();
-            if(!noticia.EhValido)
-            {
-                return BadRequest(noticia.ObterMensagensValidacao());
-            }
-            if(noticia.id > 0)
-            {
-                _noticiaRepositorio.Atualizar(noticia);
-            }
-            else
-            {
-                _noticiaRepositorio.Adicionar(noticia);
-            }
-
-
-            return Created("api/noticia", noticia);
-
-            }catch(Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        [HttpPost(Deletar)]
-        public IActionResult Deletar([Frombody] Noticia noticia)
-        {
-            try{
-
-                //noticia reecebida do FromBody, deve ter a propriedade Id > 0
-                _noticiaRepositorio.remover(noticia);
-                return Json(_noticiaRepositorio.ObterTodos());
-
-            }catch(Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        [HttpPost("EnviarArquivo")]
-        public IActionResult EnviarArquivo()
+        public async Task<IActionResult> Create([FromBody] NoticiaModel noticiaModel)
         {
             try
             {
-                var formFile = _httpContextAccessor._httpContext.Request.Form.Files["arqivoEnviado"];
-                var nomeArquivo = formFile.FileName;
-                var extensao = nomeArquivo.Split(".").Last();
-                string novoNomeArquivo = GerarNovoNomeArquivo(nomeArquivo, extensao);
-                var pastaArquivos = _hostingEnvioronment.WebRootpath+ "\\arquivos\\";
-                var nomeCompleto = pastaArquivos + novoNomeArquivo;
+                var noticia = _mapper.Map<Noticia>(noticiaModel);
+                noticia.Id = Guid.NewGuid().ToString();
+                _service.Add(noticia);
+                if (await _service.SaveChangesAsync())
+                    return Ok(true);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
-                using (var streamArquivo = new FileStream(nomeCompleto, FileMode.Create))
+        [HttpDelete()]
+        public async Task<IActionResult> Delete([FromBody] string id)
+        {
+            try
+            {
+                var noticia = await _service.GetById(id);
+                if (noticia!=null)
                 {
-                    formFile.CopyTo(streamArquivo);
+                    _service.Delete(noticia);
+                    await _service.SaveChangesAsync();
+                    return NoContent();
                 }
-                return Json(nomeCompletoArquivo);
+                return NotFound();
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
-        private static string GerarNovoNomeArquivo(string nomeArquivo, string extensao)
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Update(string id, [FromBody] NoticiaModel noticiaModel)
         {
-            var arrayNomeCompleto = Path.GetFileNameWithoutExtension(nomeArquivo).Take(10).ToArray();
-            var nomeArquivo = new string(arrayNomeCompleto).Replace(" ","-");
-            novoNomeArquivo = $" {novoNomeArquivo}_{DataTime.Now.Year}{DataTime.Now.Mont}{DataTime.Now.Day}{DataTime.Now.Hour}{DataTime.Now.Minute}{DataTime.Now.Second}.{extensao}";
-            return novoNomeArquivo;
+            var noticia = await _service.GetById(id);
+            if (noticia == null)                
+                return NotFound();
+
+            _mapper.Map(noticiaModel, noticia);
+            _service.Update(noticia);
+            if(await _service.SaveChangesAsync())
+                return Ok();
+
+            return BadRequest();
         }
-        
     }
 }

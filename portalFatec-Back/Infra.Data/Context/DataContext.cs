@@ -6,5 +6,6 @@ namespace Infra.Data.Context
     {
         public DataContext(DbContextOptions<DataContext> options): base(options){}
         public DbSet <Admin> Admin { get; set; }
+        public DbSet<Noticia> Noticia { get; set; }
     }
 }

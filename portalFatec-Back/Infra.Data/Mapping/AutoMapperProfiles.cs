@@ -9,6 +9,7 @@ namespace Infra.Data.Mapping
         public AutoMapperProfiles()
         {
            CreateMap<Admin, AdminModel>().ReverseMap();
+           CreateMap<Noticia, NoticiaModel>().ReverseMap();
         }
     }
 }

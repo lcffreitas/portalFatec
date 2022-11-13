@@ -13,7 +13,7 @@ namespace Application.Controllers
     {
         public IBaseService<Admin> Service { get; }
         public IMapper Mapper { get; }
-        public AdminController(IBaseService<Admin> service, IMapper mapper )
+        public AdminController(IBaseService<Admin> service, IMapper mapper)
         {
             this.Mapper = mapper;
             this.Service = service;
@@ -26,7 +26,7 @@ namespace Application.Controllers
                 var results = this.Mapper.Map<AdminModel[]>(entity);
                 return Ok(results);
             }
-            catch(System.Exception ex){
+            catch(Exception ex){
                 throw new Exception(ex.Message);
             }
         }
