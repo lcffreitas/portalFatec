@@ -1,19 +1,12 @@
 <fieldset>
-  <legend>Selecione a notícia que deseja alterar: </legend>
+  <legend>Cadastro de Notícias</legend>
+  <p><label for="titulo">Título:</label>
+     <input type="text" name="titulo" value="" />
+  </p>
 
-  <div>
-    <input type="radio" id="not1" name="drone" value="Notícia 1"
-           checked>
-    <label for="not1">Notícia 1</label>
-  </div>
+  <p><label for="desc">Descrição:</label>
+     <textarea name="desc" placeholder="Insira a descrição"></textarea>
+  </p>
 
-  <div>
-    <input type="radio" id="not2" name="drone" value="Notícia 2">
-    <label for="not2">Notícia 2</label>
-  </div>
-
-  <div>
-    <input type="radio" id="not3" name="drone" value="Notícia 3">
-    <label for="not3">Notícia 3</label>
-  </div>
+  <p><input type="submit" name="btnCadastrar" value="Cadastrar" /></p>
 </fieldset>
