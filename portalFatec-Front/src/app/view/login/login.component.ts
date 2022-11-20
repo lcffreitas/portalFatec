@@ -1,6 +1,10 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { UntypedFormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
+=======
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+>>>>>>> 1e473bc62b10c734c51f4ad3f38e1ced9dfac853
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,8 +14,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
+<<<<<<< HEAD
   public loginForm !: UntypedFormGroup
   constructor(private router: Router, private formBuilder : UntypedFormBuilder, private http : HttpClient) { }
+=======
+  public loginForm !: FormGroup
+  constructor(private router: Router, private formBuilder : FormBuilder, private http : HttpClient) { }
+>>>>>>> 1e473bc62b10c734c51f4ad3f38e1ced9dfac853
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
