@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -7,9 +7,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class ViewComponent implements OnInit {
   public noticia : any = [];
-  public noticaForm!: FormGroup;
+  public noticaForm!: UntypedFormGroup;
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
   ) { }
 
   ngOnInit(): void {

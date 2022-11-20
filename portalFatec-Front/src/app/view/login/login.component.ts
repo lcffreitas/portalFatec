@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  public loginForm !: FormGroup
-  constructor(private router: Router, private formBuilder : FormBuilder, private http : HttpClient) { }
+  public loginForm !: UntypedFormGroup
+  constructor(private router: Router, private formBuilder : UntypedFormBuilder, private http : HttpClient) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
