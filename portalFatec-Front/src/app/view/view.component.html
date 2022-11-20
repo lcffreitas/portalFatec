@@ -1,1 +1,42 @@
 <p>view works!</p>
+<ng-container *ngIf="noticia.length !=0">
+  <div class="card-table">
+      <div class="cart-product">
+          <table class="table table-responsive">
+              <thead>
+                  <tr>
+                    <th>N.º</th>
+                    <th>Nome da Noticia</th>
+                    <th>Descrição da Noticia</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of noticia; let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{item.name}}</td>
+                  <td style="width: 12%;">{{item.status}}</td>
+                  <td style="width: 12%;">{{item.titulo}}</td>
+                  <td style="width: 12%;">{{item.descricao}}</td>
+                  <td style="width: 12%;">{{item.data}}</td>
+
+              </tr>
+
+              </tbody>
+          </table>
+      </div>
+  </div>
+</ng-container>
+
+
+<ng-container *ngIf="noticia.length ==0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-tittle" style="font-size: 20px;">Meu Carrinho</h5>
+    </div>
+    <div class="center">
+      <h4 style="font-size: 25px;">Seu quadro de Noticia está vazio</h4>
+      <h6 style="font-size: 20px;">Adicione uma Noticia</h6>
+      <button routerLink="/produtos" class="btn btn-primary">Adicione uma Noticia</button>
+    </div>
+  </div>
+</ng-container>
