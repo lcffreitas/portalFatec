@@ -26,6 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
+import { Login2Component } from './view/login2/login2.component';
 //import {MatChipsModule} from '@angular/material/Chips';
 //import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
@@ -37,6 +38,7 @@ import { MatSelectModule } from '@angular/material/select';
    CadastroComponent,
    DialogNoticiaComponent,
    PostnoticiaComponent,
+   Login2Component,
   ],
   imports: [
     BrowserModule,

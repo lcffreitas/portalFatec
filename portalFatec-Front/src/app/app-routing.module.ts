@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './view/cadastro/cadastro.component';
 import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
+import { Login2Component } from './view/login2/login2.component';
 import { PostnoticiaComponent } from './view/postnoticia/postnoticia.component';
 
-const routes: Routes = [{path: '',component:HomeComponent},
+const routes: Routes = [{path: 'home',component:HomeComponent}, 
 {path: 'login',component:LoginComponent},
 {path: 'cadastro',component:CadastroComponent},
-{path: 'cadastronoticia',component: PostnoticiaComponent},
+{path: 'postnoticia',component: PostnoticiaComponent},
+{path: 'login2',component:Login2Component},
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Adicionar Noticia</h1>
+<!-- <h1 mat-dialog-title>Adicionar Noticia</h1>
 <div mat-dialog-content>
   <form [formGroup]="NoticiaForm">
     <mat-form-field appearance="outline">
@@ -23,4 +23,26 @@
   >
     {{ actionBtn }}
   </button>
-</div>
+</div> -->
+
+<header>
+
+
+  <ul>
+    <li><h1> Adicionar Notícia</h1></li>
+
+  </ul>
+  <div id="logo">
+
+    <a href="home"><img src="/assets/fatecbranco.png" height="45"></a>
+
+  </div>
+</header>
+
+<form>
+  <label>Adicione uma nova notícia:</label>
+  <input placeholder="Título da Noticia" type="text" name="titulonoticia" maxlength="40">
+  <textarea placeholder="Descrição da Noticia" name="descricaonoticia"
+   rows="15" wraps="15" maxlength="550" cols="40"></textarea>
+  <input type="submit" value="ADICIONAR NOTÍCIA">
+</form>
