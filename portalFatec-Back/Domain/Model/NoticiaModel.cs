@@ -2,7 +2,7 @@
 {
     public class NoticiaModel
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; set; }
 
         public Boolean Status { get; set; }
 

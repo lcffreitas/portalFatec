@@ -46,3 +46,15 @@ E:\Tcc_git\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.dll
 E:\Tcc_git\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\ref\Domain.dll
 E:\Tcc_git\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.pdb
 E:\Tcc_git\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\TCC\portalFatec\portalFatec-Back\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\TCC\portalFatec\portalFatec-Back\Domain\bin\Debug\net6.0\Domain.dll
+C:\TCC\portalFatec\portalFatec-Back\Domain\bin\Debug\net6.0\Domain.pdb
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.dll
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\Domain.pdb
+C:\TCC\portalFatec\portalFatec-Back\Domain\obj\Debug\net6.0\ref\Domain.dll

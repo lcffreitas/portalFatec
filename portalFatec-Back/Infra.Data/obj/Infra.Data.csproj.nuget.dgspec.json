@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj": {}
+    "C:\\TCC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj": {}
   },
   "projects": {
-    "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
+    "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\programs\\.nuget\\packages\\",
-        "outputPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\obj\\",
+        "projectPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\lcffr\\.nuget\\packages\\",
+        "outputPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\programs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lcffr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,21 +52,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj": {
+    "C:\\TCC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
+        "projectUniqueName": "C:\\TCC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
         "projectName": "Infra.Data",
-        "projectPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\programs\\.nuget\\packages\\",
-        "outputPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\obj\\",
+        "projectPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\lcffr\\.nuget\\packages\\",
+        "outputPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\programs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lcffr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -78,8 +78,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj"
+              "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj"
               }
             }
           }
@@ -138,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

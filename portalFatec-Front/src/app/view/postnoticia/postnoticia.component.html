@@ -1,33 +1,4 @@
-<!-- <h1 mat-dialog-title>Adicionar Noticia</h1>
-<div mat-dialog-content>
-  <form [formGroup]="NoticiaForm">
-    <mat-form-field appearance="outline">
-      <mat-label>Nome da Noticia</mat-label>
-      <input formControlName="name" matInput placeholder="Name" />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Descrição da Noticia</mat-label>
-      <input formControlName="description" matInput placeholder="Name" />
-    </mat-form-field>
-
-  </form>
-</div>
-<div mat-dialog-action [align]="'end'">
-  <button mat-raised-button color="warn" mat-dialog-close>Fechar</button>
-  <button
-    style="margin-left: 8px"
-    mat-raised-button
-    color="primary"
-    (click)="AddNoticia()"
-  >
-    {{ actionBtn }}
-  </button>
-</div> -->
-
 <header>
-
-
   <ul>
     <li><h1> Adicionar Notícia</h1></li>
 
@@ -43,6 +14,6 @@
   <label>Adicione uma nova notícia:</label>
   <input placeholder="Título da Noticia" type="text" name="titulonoticia" maxlength="40">
   <textarea placeholder="Descrição da Noticia" name="descricaonoticia"
-   rows="15" wraps="15" maxlength="550" cols="40"></textarea>
+   rows="15" wraps="15" maxlength="500" cols="40"></textarea>
   <input type="submit" value="ADICIONAR NOTÍCIA">
 </form>
