@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DialogNoticiaComponent } from './dialog-noticia/dialog-noticia.component';
+import { PostnoticiaComponent } from './postnoticia.component';
 
 
 describe('DialogNoticiaComponent', () => {
-  let component: DialogNoticiaComponent;
-  let fixture: ComponentFixture<DialogNoticiaComponent>;
+  let component: PostnoticiaComponent;
+  let fixture: ComponentFixture<PostnoticiaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogNoticiaComponent ]
+      declarations: [ PostnoticiaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DialogNoticiaComponent);
+    fixture = TestBed.createComponent(PostnoticiaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

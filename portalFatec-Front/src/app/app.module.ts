@@ -12,10 +12,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewComponent } from './view/view.component';
 import { HomeComponent } from './view/home/home.component';
-import { LoginComponent } from './view/login/login.component';
 import { CadastroComponent } from './view/cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DialogNoticiaComponent } from './view/postnoticia/dialog-noticia/dialog-noticia.component';
 import { PostnoticiaComponent } from './view/postnoticia/postnoticia.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -34,9 +32,7 @@ import { Login2Component } from './view/login2/login2.component';
    AppComponent,
    ViewComponent,
    HomeComponent,
-   LoginComponent,
    CadastroComponent,
-   DialogNoticiaComponent,
    PostnoticiaComponent,
    Login2Component,
   ],

@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DialogNoticiaComponent } from './dialog-noticia/dialog-noticia.component';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup } from '@angular/forms';
 
@@ -21,18 +20,9 @@ actionBtn: any;
 
 //  })
   }
-  openDialog() {
-    this.dialog.open(DialogNoticiaComponent, {
-      width: '30%'
-    }).afterClosed().subscribe(val=>{
-      if(val ==='save'){
-      }
-
-    })
-  }
 
   AddNoticia(){
-
+    
   }
 }
 
