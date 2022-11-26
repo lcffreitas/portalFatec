@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Noticia } from '../postnoticia/Model/noticia';
+import { PostnoticiaService } from '../postnoticia/postnoticia.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  noticias: Noticia[] = [];
+
+  constructor(private noticiaService: PostnoticiaService) { }
 
   ngOnInit(): void {
+    this.getNoticias();
+  }
+
+  getNoticias(){
+    this.noticiaService.getNoticias().subscribe((response:Noticia[]) => {
+      this.noticias = response;
+    });
   }
 
 }

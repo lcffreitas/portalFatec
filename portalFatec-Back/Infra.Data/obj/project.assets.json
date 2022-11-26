@@ -1456,32 +1456,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\programs\\.nuget\\packages\\": {}
+    "C:\\Users\\erikc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
+      "projectUniqueName": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
       "projectName": "Infra.Data",
-      "projectPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
-      "packagesPath": "C:\\Users\\programs\\.nuget\\packages\\",
-      "outputPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Infra.Data\\obj\\",
+      "projectPath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Infra.Data\\Infra.Data.csproj",
+      "packagesPath": "C:\\Users\\erikc\\.nuget\\packages\\",
+      "outputPath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\programs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\erikc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\Tcc_git\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj"
+            "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj"
             }
           }
         }
@@ -1540,7 +1547,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

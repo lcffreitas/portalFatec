@@ -52,8 +52,8 @@ namespace Application.Controllers
 
         //recuperar as ultimas 3 noticias cadastradas
         [HttpGet]
-        [Route("GetLatestNew")]
-        public async Task<IActionResult> GetLatestNew()
+        [Route("GetLatestNews")]
+        public async Task<IActionResult> GetLatestNews()
         {
             try
             {

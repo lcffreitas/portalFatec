@@ -6,9 +6,15 @@
   </div>
 
   <ul>
-    <li><h1> Portal De Notícias </h1></li>
-    <a href="login2" ><li> <img  class="login" src="/assets/user.png">   </li></a>
-      <a href="postnoticia" ><li> <img  class="login" src="/assets/botaoNoticia.png">   </li></a>
+    <li>
+      <h1> Portal De Notícias </h1>
+    </li>
+    <a href="login2">
+      <li> <img class="login" src="/assets/user.png"> </li>
+    </a>
+    <a href="postnoticia">
+      <li> <img class="login" src="/assets/botaoNoticia.png"> </li>
+    </a>
   </ul>
 </header>
 
@@ -20,32 +26,14 @@
 <div class="noticias">
   <ul class="noticias">
 
-    <li>
+    <li *ngFor="let noticia of noticias; index as i; first as isFirst">
       <div class="card">
         <div class="card-details">
-          <p class="text-title">Título da notícia 1</p>
-          <p class="text-body">Isso é uma descrição demonstrativa para o card de notícia 1 apenas para exemplos práticos</p>
+          <p class="text-title">{{noticia.titulo}}</p>
+          <p class="text-body"> {{noticia.descricao}}</p>
         </div>
-        </div>
+      </div>
     </li>
 
-
-    <li>
-      <div class="card">
-        <div class="card-details">
-          <p class="text-title">Título da notícia 2</p>
-          <p class="text-body">Isso é uma descrição demonstrativa para o card de notícia 2 apenas para exemplos práticos</p>
-        </div>
-        </div>
-    </li>
-
-    <li>
-      <div class="card">
-        <div class="card-details">
-          <p class="text-title">Título da notícia 3</p>
-          <p class="text-body">Isso é uma descrição demonstrativa para o card de notícia 3 apenas para exemplos práticos</p>
-        </div>
-        </div>
-    </li>
-</ul>
+  </ul>
 </div>

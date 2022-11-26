@@ -1,8 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DialogNoticiaComponent } from './dialog-noticia/dialog-noticia.component';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-postnoticia',
