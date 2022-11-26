@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {}
   },
   "projects": {
@@ -12,14 +13,31 @@
         "projectPath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\erikc\\.nuget\\packages\\",
         "outputPath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\obj\\",
+=======
+    "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\lcffr\\.nuget\\packages\\",
+        "outputPath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\obj\\",
+>>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\erikc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\lcffr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -58,7 +76,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+>>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
         }
       }
     }

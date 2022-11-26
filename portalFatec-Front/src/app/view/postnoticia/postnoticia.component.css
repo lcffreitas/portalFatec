@@ -27,6 +27,11 @@ header {
     display: block;
   }
 
+  label{
+    font-size: 20px;
+    margin: 15px;
+  }
+
   textarea{
     margin: 15px;
   }
@@ -36,7 +41,7 @@ header {
     width: 303px;
   }
 
-  input[type=submit]{
+  .btnAdd{
     background: #ff0000;
     color: #fff;
     outline: none;
@@ -45,6 +50,8 @@ header {
     cursor: pointer;
     font-size: 18px;
     transition: 0.3s;
+    margin: 15px;
+    width: 303px;
   }
 
 
