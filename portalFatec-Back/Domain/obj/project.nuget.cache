@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "zE7b4rnWn95shQHqFcqswGwV36eJRG+USEc5gDw6uAMUjsusy4XIRId/RFBgjckOhjWMSECdrC6JF30fNSnu/w==",
   "success": true,
   "projectFilePath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
-=======
-  "dgSpecHash": "rgvNH5YIBz8/xpMLLnU6zx+KrAC1TmY+wu8YmY+H8iYwX6Bv2sZ28REXeLin4vmpTjX7JEks8TEcqo5QyQATcw==",
-  "success": true,
-  "projectFilePath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
->>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

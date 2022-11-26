@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,27 +22,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { Login2Component } from './view/login2/login2.component';
-//import {MatChipsModule} from '@angular/material/Chips';
-//import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
-<<<<<<< HEAD
-    AppComponent,
-    ViewComponent,
-    HomeComponent,
-    LoginComponent,
-    CadastroComponent,
-    DialogNoticiaComponent,
-    PostnoticiaComponent,
-    Login2Component,
-=======
    AppComponent,
    ViewComponent,
    HomeComponent,
    CadastroComponent,
    PostnoticiaComponent,
    Login2Component,
->>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
   ],
   imports: [
     BrowserModule,

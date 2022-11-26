@@ -8,17 +8,9 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Alpha-API
 build_property.RootNamespace = Alpha-API
-<<<<<<< HEAD
 build_property.ProjectDir = D:\GITFATEC\portalFatec\portalFatec-Back\Alpha-API\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\GITFATEC\portalFatec\portalFatec-Back\Alpha-API
-=======
-build_property.ProjectDir = C:\TCC\portalFatec\portalFatec-Back\Alpha-API\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\TCC\portalFatec\portalFatec-Back\Alpha-API
->>>>>>> 16858752cbd6daaa2ac976dc7a18a6b0a64ffd5e
 build_property._RazorSourceGeneratorDebug = 
