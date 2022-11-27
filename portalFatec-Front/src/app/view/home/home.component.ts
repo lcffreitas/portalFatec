@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   getNoticias(){
-    this.noticiaService.getNoticias().subscribe((response:Noticia[]) => {
+    this.noticiaService.getUltimasNoticias().subscribe((response:Noticia[]) => {
       this.noticias = response;
     });
   }

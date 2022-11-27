@@ -20,13 +20,16 @@ namespace Application.Controllers
         }
 
         [HttpGet("{id}", Name = "GetById")]
-        public IActionResult GetById(string id)
+        public async Task<IActionResult> GetById(string id)
         {
             try
             {
-                var noticia = _service.GetById(id);
-                if (noticia!=null)                
-                    return Ok(noticia);
+                var noticia = await _service.GetById(id);
+                if (noticia != null)
+                {
+                    var noticiaModel = _mapper.Map<Noticia, NoticiaModel>(noticia);
+                    return Ok(noticiaModel);
+                }
                 return NotFound();                
             }
             catch (Exception ex)
@@ -42,7 +45,7 @@ namespace Application.Controllers
             {
                 var noticias = await _service.GetAll();
                 var noticiasModel = _mapper.Map<IEnumerable<NoticiaModel>>(noticias);
-                return Ok(noticiasModel);
+                return Ok(noticiasModel.OrderByDescending(n => n.Data));
             }
             catch (Exception ex)
             {
@@ -58,7 +61,7 @@ namespace Application.Controllers
             try
             {
                 var noticias = await _service.GetAll();
-                noticias = noticias.OrderByDescending(n => n.Data).Take(3);
+                noticias = noticias.Where(n=> n.Status).OrderByDescending(n => n.Data).Take(3);
                 var noticiasModel = _mapper.Map<IEnumerable<NoticiaModel>>(noticias);
                 return Ok(noticiasModel);
             }
@@ -75,6 +78,7 @@ namespace Application.Controllers
             {
                 var noticia = _mapper.Map<Noticia>(noticiaModel);
                 noticia.Id = Guid.NewGuid().ToString();
+                noticia.Status = true;
                 _service.Add(noticia);
                 if (await _service.SaveChangesAsync())
                     return Ok(true);
@@ -86,8 +90,8 @@ namespace Application.Controllers
             }
         }
 
-        [HttpDelete()]
-        public async Task<IActionResult> Delete([FromBody] string id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {

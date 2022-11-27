@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rgvNH5YIBz8/xpMLLnU6zx+KrAC1TmY+wu8YmY+H8iYwX6Bv2sZ28REXeLin4vmpTjX7JEks8TEcqo5QyQATcw==",
+  "dgSpecHash": "zE7b4rnWn95shQHqFcqswGwV36eJRG+USEc5gDw6uAMUjsusy4XIRId/RFBgjckOhjWMSECdrC6JF30fNSnu/w==",
   "success": true,
-  "projectFilePath": "C:\\TCC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\GITFATEC\\portalFatec\\portalFatec-Back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

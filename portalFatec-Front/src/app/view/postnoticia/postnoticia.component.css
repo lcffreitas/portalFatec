@@ -5,7 +5,6 @@ header {
     align-items: center;
     background-color: #921710;
     color: white;
-  
   }
   
   #logo {
@@ -18,40 +17,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  li{
-    list-style: none;
-    margin-top: 25px;
+  .botoes {
+    text-align: right;
+    margin: 10px 0px 10px 0px;
   }
-
-  label,input,button{
-    display: block;
-  }
-
-  label{
-    font-size: 20px;
-    margin: 15px;
-  }
-
-  textarea{
-    margin: 15px;
-  }
-
-  input{
-    margin: 15px;
-    width: 303px;
-  }
-
-  .btnAdd{
-    background: #ff0000;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
-    margin: 15px;
-    width: 303px;
-  }
-
-
