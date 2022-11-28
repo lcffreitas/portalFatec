@@ -1,5 +1,5 @@
 <header>
-  <h1>Adicionar Notícia</h1>
+  <h1 class="h1Header">Adicionar Notícia</h1>
   <div id="logo">
     <a href="home"><img src="/assets/fatecbranco.png" height="45"></a>
   </div>
@@ -8,7 +8,7 @@
 <div class="container">
   <form #f="ngForm" (ngSubmit)="onSubmit()">
     <div class="row">
-      <label for="titulo" class="form-label">Título</label>
+      <label for="titulo" class="form-label">Título: </label>
       <input type="text" name="titulo" [(ngModel)]="noticia.titulo" class="form-control" id="titulo"
         aria-describedby="título" required #titulo="ngModel"
         [class.is-invalid]="titulo.invalid && (titulo.dirty || titulo.touched)">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="row">
-      <label for="descricao" class="form-label">Descrição</label>
+      <label for="descricao" class="form-label">Descrição: </label>
       <textarea class="form-control" name="descricao" [(ngModel)]="noticia.descricao" id="descricao" rows="3" required
         #descricao="ngModel"
         [class.is-invalid]="descricao.invalid && (descricao.dirty || descricao.touched)"></textarea>
@@ -30,7 +30,7 @@
   </form>
 </div>
 
-<h1>Notícias</h1>
+<h1 style="margin-left: 100px">Notícias</h1>
 
 <div class="container">
 
@@ -38,7 +38,7 @@
     <thead>
       <tr>
         <th scope="col">Título</th>
-        <th scope="col">Descrição</th>
+        <th scope="col" style="width: 50%">Descrição</th>
         <th scope="col">Data</th>
         <th scope="col">Editar</th>
         <th scope="col">Excluir</th>
