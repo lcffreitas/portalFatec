@@ -9,37 +9,49 @@ import { PostnoticiaService } from './postnoticia.service';
 })
 export class PostnoticiaComponent implements OnInit {
 
-  noticia:Noticia = new Noticia();
-  noticias:Noticia[] = [];
-  
-  constructor(private noticiaService:PostnoticiaService) { }
+  noticia: Noticia = new Noticia();
+  noticias: Noticia[] = [];
+
+  constructor(private noticiaService: PostnoticiaService) { }
 
   ngOnInit(): void {
     this.getTodasNoticias();
   }
 
   onSubmit() {
-    let resposta = null;
-    this.noticiaService.postNoticia(this.noticia).subscribe(data => resposta = data);
-    //todo trocar por atualizar e não dar refresh na página
-    //window.location.reload();
+    this.noticiaService.postNoticia(this.noticia).subscribe({
+      next: (v) => this.postSucesso(v),
+      error: (e) => this.postFalha(e),
+      complete: () => console.info('complete')
+    });
   }
 
-  getTodasNoticias(){
-    this.noticiaService.getTodasNoticias().subscribe((response:Noticia[]) => {
+  postSucesso(resposta: any) {
+    alert('operação realizada com sucesso!');
+    window.location.reload();
+  }
+
+  postFalha(resposta: any) {
+    alert('erro ao cadastrar notícia.');
+  }
+
+  getTodasNoticias() {
+    this.noticiaService.getTodasNoticias().subscribe((response: Noticia[]) => {
       this.noticias = response;
     });
   }
 
-  excluirNoticia(id:string){
-    this.noticiaService.deleteNoticia(id).subscribe();
-    //todo trocar por atualizar e não dar refresh na página
-    window.location.reload();
+  excluirNoticia(id: string) {
+    this.noticiaService.deleteNoticia(id).subscribe({
+      next: (v) => this.postSucesso(v),
+      error: (e) => this.postFalha(e),
+      complete: () => console.info('complete')
+    });
   }
 
-  editarNoticia(id:string){
-    this.noticiaService.getNoticia(id).subscribe((response:Noticia) => {
-      console.log('response ',response);
+  editarNoticia(id: string) {
+    this.noticiaService.getNoticia(id).subscribe((response: Noticia) => {
+      console.log('response ', response);
       this.noticia = response;
     });
     console.log('get', this.noticia);
