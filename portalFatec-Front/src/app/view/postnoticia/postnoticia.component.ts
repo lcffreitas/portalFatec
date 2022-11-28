@@ -18,6 +18,10 @@ export class PostnoticiaComponent implements OnInit {
     this.getTodasNoticias();
   }
 
+  public trackItem (index: number, noticia: Noticia) {
+    return noticia.id;
+  }
+
   onSubmit() {
     this.noticiaService.postNoticia(this.noticia).subscribe({
       next: (v) => this.postSucesso(v),
@@ -28,7 +32,7 @@ export class PostnoticiaComponent implements OnInit {
 
   postSucesso(resposta: any) {
     alert('operação realizada com sucesso!');
-    window.location.reload();
+    this.getTodasNoticias();
   }
 
   postFalha(resposta: any) {
@@ -50,11 +54,9 @@ export class PostnoticiaComponent implements OnInit {
   }
 
   editarNoticia(id: string) {
-    this.noticiaService.getNoticia(id).subscribe((response: Noticia) => {
-      console.log('response ', response);
+    this.noticiaService.getNoticia(id).subscribe((response: Noticia) => {      
       this.noticia = response;
-    });
-    console.log('get', this.noticia);
+    });    
   }
 }
 
